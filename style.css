@@ -120,3 +120,89 @@ footer a {
   font-weight: 500;
   text-decoration: none;
 }
+
+
+.icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.icons svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--rosa-escuro);
+  transition: transform 0.3s ease;
+}
+
+.icons svg:hover {
+  transform: scale(1.15);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 1.2rem;
+  max-width: 400px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  color: var(--rosa-escuro);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.footer address a {
+  color: var(--texto);
+  text-decoration: none;
+  font-style: normal;
+}
+
