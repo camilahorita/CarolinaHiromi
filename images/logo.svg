@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180">
+  <style>
+    .assinatura { fill: none; stroke: #e28a9b; stroke-width: 4; }
+    .nome { font-family: 'Playfair Display', serif; font-size: 42px; fill: #4a4a4a; }
+    .sub { font-family: 'Montserrat', sans-serif; font-size: 20px; letter-spacing: 4px; fill: #c38ea1; }
+  </style>
+
+  <!-- Assinatura estilizada -->
+  <path class="assinatura"
+    d="M120 90
+       C150 60, 190 60, 210 90
+       S260 120, 300 90
+       S360 60, 400 90" />
+
+  <text x="300" y="130" text-anchor="middle" class="nome">
+    Dra. Carolina Hiromi
+  </text>
+
+  <text x="300" y="160" text-anchor="middle" class="sub">
+    SAÚDE E BELEZA
+  </text>
+</svg>
