@@ -150,3 +150,13 @@ body {
   cursor: pointer;
   color: var(--rosa-escuro);
 }
+.footer {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.footer address a {
+  color: var(--texto);
+  text-decoration: none;
+  font-style: normal;
+}
