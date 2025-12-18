@@ -50,6 +50,9 @@ const procedimentos = {
 cards.forEach(card => {
   card.addEventListener('click', () => {
     const tipo = card.dataset.procedimento;
+
+    if (!procedimentos[tipo]) return;
+
     title.textContent = procedimentos[tipo].title;
     text.textContent = procedimentos[tipo].text;
     modal.classList.add('active');
