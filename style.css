@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +8,11 @@
 :root {
   font-size: 62.5%;
   --rosa-claro: #f7edf0;
-  --rosa-medio: #e4bcc8;
+  --rosa-medio: #e5bcc8;
   --rosa-escuro: #c38ea1;
   --rosa-hover: #b5798e;
   --texto: #4a4a4a;
+  --cinza: #888;
   --branco: #ffffff;
 }
 
@@ -25,30 +26,14 @@ body {
 /* ================= HEADER ================= */
 .top-header {
   background: var(--branco);
-  width: 100%;
-}
-
-.top-header > img,
-.top-header > .header-icons {
-  flex-shrink: 0;
-}
-
-.top-header {
-  display: flex;
-  justify-content: center;
-}
-
-.top-header-inner {
-  width: 100%;
-  max-width: 1200px;
-  padding: 2.4rem 3rem;
+  padding: 2.2rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo-svg {
-  height: 120px;
+  height: 110px;
   max-width: 100%;
 }
 
@@ -65,52 +50,44 @@ body {
 }
 
 .header-icons svg:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
   fill: var(--rosa-hover);
 }
 
 /* ================= APRESENTAÇÃO ================= */
 .apresentacao {
   background: var(--branco);
-  padding: 7rem 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.apresentacao-container {
-  max-width: 900px;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
 }
 
 .apresentacao img {
   width: 100%;
-  max-width: 360px;
-  border-radius: 2.2rem;
-  margin-bottom: 3.5rem;
+  max-width: 420px;
+  border-radius: 2.4rem;
+}
+
+.apresentacao-texto h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
 }
 
 .apresentacao-texto h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.6rem;
-  margin-bottom: .8rem;
-}
-
-.apresentacao-texto h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: var(--rosa-escuro);
-  margin-bottom: .6rem;
-}
-
-.apresentacao-texto h4 {
-  font-size: 1.5rem;
-  color: #888;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.6rem;
 }
 
 .apresentacao-texto p {
   font-size: 1.6rem;
   max-width: 520px;
-  margin: 0 auto 3.8rem;
+  margin-bottom: 4rem;
 }
 
 /* ================= BOTÃO ================= */
@@ -119,7 +96,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 4.8rem;
-  padding: 0 4.2rem;
+  padding: 0 4.4rem;
   background: var(--rosa-escuro);
   color: var(--branco);
   text-decoration: none;
@@ -137,9 +114,11 @@ body {
 /* ================= PROCEDIMENTOS ================= */
 .procedimentos {
   padding: 7rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.procedimentos h3 {
+.section-title {
   font-family: 'Playfair Display', serif;
   font-size: 3.2rem;
   text-align: center;
@@ -148,8 +127,8 @@ body {
 
 .cards {
   display: grid;
-  gap: 3.2rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3.2rem;
 }
 
 .card {
@@ -162,7 +141,7 @@ body {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
 .card img {
@@ -171,7 +150,7 @@ body {
   object-fit: cover;
 }
 
-.card h4 {
+.card h3 {
   padding: 1.8rem;
   font-size: 1.6rem;
   text-align: center;
@@ -243,7 +222,6 @@ body {
   fill: var(--rosa-escuro);
 }
 
-/* ENDEREÇO CLICÁVEL */
 .footer address a {
   display: inline-flex;
   align-items: center;
@@ -252,7 +230,7 @@ body {
   font-size: 1.5rem;
   font-style: normal;
   text-decoration: none;
-  padding: 1.2rem 2rem;
+  padding: 1.2rem 2.4rem;
   border-radius: 3rem;
   transition: background .3s ease;
 }
@@ -268,20 +246,41 @@ body {
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+  .top-header {
+    padding: 1.8rem 2rem;
+  }
+
   .logo-svg {
-    height: 85px;
+    height: 80px;
+  }
+
+  .apresentacao {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 4.5rem 2rem;
   }
 
   .apresentacao img {
     max-width: 260px;
+    margin: 0 auto 3rem;
+  }
+
+  .apresentacao-texto h1 {
+    font-size: 2.8rem;
   }
 
   .apresentacao-texto h2 {
-    font-size: 2.8rem;
+    font-size: 1.6rem;
+  }
+
+  .apresentacao-texto p {
+    font-size: 1.5rem;
+    margin: 0 auto 3.2rem;
   }
 
   .btn {
     width: 100%;
     max-width: 300px;
+    margin: 0 auto;
   }
 }
