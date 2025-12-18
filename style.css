@@ -7,61 +7,68 @@
 :root {
   font-size: 62.5%;
   --rosa-claro: #f6e9ec;
-  --rosa-medio: #e8c7cf;
+  --rosa-medio: #e3bcc7;
   --rosa-escuro: #c38ea1;
   --texto: #4a4a4a;
+  --branco: #ffffff;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--rosa-claro);
   color: var(--texto);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 4rem;
-  background: #fff;
+  padding: 2.4rem 4rem;
+  background: var(--branco);
 }
 
 .logo-svg {
-  height: 120px;
+  height: 110px;
 }
 
 .header-icons {
   display: flex;
-  gap: 2.4rem;
+  gap: 2.2rem;
 }
 
 .header-icons svg {
   width: 28px;
   height: 28px;
   fill: var(--rosa-escuro);
+  transition: transform .2s ease;
 }
 
-/* APRESENTAÇÃO */
+.header-icons svg:hover {
+  transform: scale(1.1);
+}
+
+/* ================= APRESENTAÇÃO ================= */
 .apresentacao {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   padding: 6rem 4rem;
-  background: #fff;
+  background: var(--branco);
   align-items: center;
 }
 
 .apresentacao img {
   width: 100%;
   max-width: 420px;
-  border-radius: 1.6rem;
+  border-radius: 2rem;
 }
 
 .apresentacao-texto h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.6rem;
-  margin-bottom: .6rem;
+  font-size: 3.8rem;
+  margin-bottom: .8rem;
 }
 
 .apresentacao-texto h2 {
@@ -72,31 +79,42 @@ body {
 
 .apresentacao-texto p {
   font-size: 1.5rem;
-  line-height: 2.5rem;
-  max-width: 42rem;
-  margin-bottom: 3.2rem;
+  line-height: 2.6rem;
+  max-width: 44rem;
+  margin-bottom: 3.6rem;
 }
 
+/* ================= BOTÃO ================= */
 .btn {
   display: inline-flex;
-  padding: 1.4rem 3.6rem;
+  align-items: center;
+  justify-content: center;
+  height: 4.8rem;
+  padding: 0 4rem;
   background: var(--rosa-escuro);
-  color: #fff;
+  color: var(--branco);
   text-decoration: none;
   border-radius: 3rem;
   font-size: 1.4rem;
+  font-weight: 500;
+  transition: background .3s ease, transform .2s ease;
 }
 
-/* PROCEDIMENTOS */
+.btn:hover {
+  background: #b67a8f;
+  transform: translateY(-2px);
+}
+
+/* ================= PROCEDIMENTOS ================= */
 .procedimentos {
   padding: 6rem 4rem;
 }
 
 .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 3.2rem;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 
 .cards {
@@ -106,10 +124,16 @@ body {
 }
 
 .card {
-  background: #fff;
-  border-radius: 1.2rem;
+  background: var(--branco);
+  border-radius: 1.6rem;
   overflow: hidden;
   cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
 .card img {
@@ -124,15 +148,15 @@ body {
   text-align: center;
 }
 
-/* MODAL */
+/* ================= MODAL ================= */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.4);
+  background: rgba(0,0,0,.45);
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 20;
 }
 
 .modal.active {
@@ -140,25 +164,42 @@ body {
 }
 
 .modal-content {
-  background: #fff;
-  padding: 3rem;
-  border-radius: 1.2rem;
-  max-width: 400px;
+  position: relative; /* 🔴 CORREÇÃO IMPORTANTE */
+  background: var(--branco);
+  padding: 3.5rem 3rem;
+  border-radius: 1.8rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
 }
 
+.modal-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.modal-content p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+/* BOTÃO FECHAR MODAL */
 .close {
   position: absolute;
-  right: 1.2rem;
-  top: 1rem;
+  top: 1.4rem;
+  right: 1.6rem;
   background: none;
   border: none;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   color: var(--rosa-escuro);
+  cursor: pointer;
+  line-height: 1;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 .footer {
-  padding: 4rem 2rem;
+  padding: 4.5rem 2rem;
   text-align: center;
   font-size: 1.4rem;
 }
@@ -167,7 +208,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 2.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
 .icons svg {
@@ -182,40 +223,49 @@ body {
   font-style: normal;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+  .top-header {
+    padding: 1.8rem 2rem;
+  }
+
   .logo-svg {
-    height: 70px;
+    height: 72px;
   }
 
   .apresentacao {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 4.5rem 2rem;
   }
 
   .apresentacao img {
     max-width: 260px;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 2.8rem;
   }
 
   .apresentacao-texto h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 
   .apresentacao-texto h2 {
     font-size: 1.6rem;
   }
 
-  .section-title {
-    font-size: 2.6rem;
+  .apresentacao-texto p {
+    margin: 0 auto 3rem;
   }
 
   .btn {
     width: 100%;
-    max-width: 260px;
+    max-width: 280px;
+    height: 4.6rem;
     margin: 0 auto;
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 2.6rem;
   }
 }
-
