@@ -1,15 +1,16 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 :root {
   font-size: 62.5%;
-  --rosa-claro: #f6e9ec;
-  --rosa-medio: #e3bcc7;
+  --rosa-claro: #f7edf0;
+  --rosa-medio: #e4bcc8;
   --rosa-escuro: #c38ea1;
+  --rosa-hover: #b5798e;
   --texto: #4a4a4a;
   --branco: #ffffff;
 }
@@ -18,20 +19,37 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: var(--rosa-claro);
   color: var(--texto);
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
 }
 
 /* ================= HEADER ================= */
 .top-header {
+  background: var(--branco);
+  width: 100%;
+}
+
+.top-header > img,
+.top-header > .header-icons {
+  flex-shrink: 0;
+}
+
+.top-header {
+  display: flex;
+  justify-content: center;
+}
+
+.top-header-inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2.4rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.4rem 3rem;
-  background: var(--branco);
 }
 
 .logo-svg {
-  height: 150px;
+  height: 120px;
+  max-width: 100%;
 }
 
 .header-icons {
@@ -43,46 +61,56 @@ body {
   width: 28px;
   height: 28px;
   fill: var(--rosa-escuro);
-  transition: transform .2s ease;
+  transition: transform .2s ease, fill .2s ease;
 }
 
 .header-icons svg:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
+  fill: var(--rosa-hover);
 }
 
 /* ================= APRESENTAÇÃO ================= */
 .apresentacao {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  padding: 6rem 4rem;
   background: var(--branco);
-  align-items: center;
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.apresentacao-container {
+  max-width: 900px;
+  text-align: center;
 }
 
 .apresentacao img {
   width: 100%;
-  max-width: 420px;
-  border-radius: 2rem;
-}
-
-.apresentacao-texto h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.8rem;
-  margin-bottom: .8rem;
+  max-width: 360px;
+  border-radius: 2.2rem;
+  margin-bottom: 3.5rem;
 }
 
 .apresentacao-texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.6rem;
+  margin-bottom: .8rem;
+}
+
+.apresentacao-texto h3 {
   font-size: 1.8rem;
   color: var(--rosa-escuro);
+  margin-bottom: .6rem;
+}
+
+.apresentacao-texto h4 {
+  font-size: 1.5rem;
+  color: #888;
   margin-bottom: 2.4rem;
 }
 
 .apresentacao-texto p {
-  font-size: 1.5rem;
-  line-height: 2.6rem;
-  max-width: 44rem;
-  margin-bottom: 3.6rem;
+  font-size: 1.6rem;
+  max-width: 520px;
+  margin: 0 auto 3.8rem;
 }
 
 /* ================= BOTÃO ================= */
@@ -91,42 +119,42 @@ body {
   align-items: center;
   justify-content: center;
   height: 4.8rem;
-  padding: 0 4rem;
+  padding: 0 4.2rem;
   background: var(--rosa-escuro);
   color: var(--branco);
   text-decoration: none;
   border-radius: 3rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 500;
   transition: background .3s ease, transform .2s ease;
 }
 
 .btn:hover {
-  background: #b67a8f;
+  background: var(--rosa-hover);
   transform: translateY(-2px);
 }
 
 /* ================= PROCEDIMENTOS ================= */
 .procedimentos {
-  padding: 6rem 4rem;
+  padding: 7rem 3rem;
 }
 
-.section-title {
+.procedimentos h3 {
   font-family: 'Playfair Display', serif;
   font-size: 3.2rem;
   text-align: center;
-  margin-bottom: 4.5rem;
+  margin-bottom: 5rem;
 }
 
 .cards {
   display: grid;
+  gap: 3.2rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 3rem;
 }
 
 .card {
   background: var(--branco);
-  border-radius: 1.6rem;
+  border-radius: 1.8rem;
   overflow: hidden;
   cursor: pointer;
   transition: transform .3s ease, box-shadow .3s ease;
@@ -134,7 +162,7 @@ body {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  box-shadow: 0 12px 32px rgba(0,0,0,.08);
 }
 
 .card img {
@@ -143,8 +171,8 @@ body {
   object-fit: cover;
 }
 
-.card h3 {
-  padding: 1.6rem;
+.card h4 {
+  padding: 1.8rem;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -165,10 +193,10 @@ body {
 }
 
 .modal-content {
-  position: relative; /* 🔴 CORREÇÃO IMPORTANTE */
+  position: relative;
   background: var(--branco);
-  padding: 3.5rem 3rem;
-  border-radius: 1.8rem;
+  padding: 3.8rem 3.2rem;
+  border-radius: 2rem;
   max-width: 420px;
   width: 90%;
   text-align: center;
@@ -182,10 +210,8 @@ body {
 
 .modal-content p {
   font-size: 1.5rem;
-  line-height: 2.5rem;
 }
 
-/* BOTÃO FECHAR MODAL */
 .close {
   position: absolute;
   top: 1.4rem;
@@ -195,78 +221,67 @@ body {
   font-size: 2.8rem;
   color: var(--rosa-escuro);
   cursor: pointer;
-  line-height: 1;
 }
 
 /* ================= FOOTER ================= */
 .footer {
-  padding: 4.5rem 2rem;
+  background: var(--branco);
+  padding: 5rem 2rem;
   text-align: center;
-  font-size: 1.4rem;
 }
 
 .icons {
   display: flex;
   justify-content: center;
-  gap: 2.4rem;
-  margin-bottom: 2.2rem;
+  gap: 2.6rem;
+  margin-bottom: 2.8rem;
 }
 
 .icons svg {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   fill: var(--rosa-escuro);
 }
 
+/* ENDEREÇO CLICÁVEL */
 .footer address a {
-  color: var(--texto);
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  color: var(--rosa-escuro);
+  font-size: 1.5rem;
   font-style: normal;
+  text-decoration: none;
+  padding: 1.2rem 2rem;
+  border-radius: 3rem;
+  transition: background .3s ease;
+}
+
+.footer address a::before {
+  content: "📍";
+}
+
+.footer address a:hover {
+  background: var(--rosa-claro);
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-  .top-header {
-    padding: 1.8rem 1.5rem;
-  }
-
   .logo-svg {
-    height: 100px;
-  }
-
-  .apresentacao {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 4.5rem 2rem;
+    height: 85px;
   }
 
   .apresentacao img {
     max-width: 260px;
-    margin: 0 auto 2.8rem;
-  }
-
-  .apresentacao-texto h1 {
-    font-size: 3rem;
   }
 
   .apresentacao-texto h2 {
-    font-size: 1.6rem;
-  }
-
-  .apresentacao-texto p {
-    margin: 0 auto 3rem;
+    font-size: 2.8rem;
   }
 
   .btn {
     width: 100%;
-    max-width: 280px;
-    height: 4.6rem;
-    margin: 0 auto;
-    font-size: 1.4rem;
-  }
-
-  .section-title {
-    font-size: 2.6rem;
+    max-width: 300px;
   }
 }
