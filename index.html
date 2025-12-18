@@ -2,25 +2,17 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- SEO MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- SEO PRINCIPAL -->
   <title>
-    Clínica Estética em Jundiapeba | Dra. Carolina Hiromi – Biomédica Esteta
+    Clínica Estética em Jundiapeba | Dra. Carolina Hiromi
   </title>
 
-  <meta name="description" content="Clínica estética em Jundiapeba – SP. Toxina botulínica, preenchimento labial, acne, peeling químico, microagulhamento e tratamentos personalizados com a Dra. Carolina Hiromi.">
-  
-  <meta name="keywords" content="clínica estética Jundiapeba, biomédica esteta Jundiapeba, toxina botulínica Jundiapeba, preenchimento labial Jundiapeba, tratamento acne Jundiapeba, estética facial Mogi das Cruzes">
+  <meta name="description"
+        content="Clínica estética em Jundiapeba. Toxina botulínica, preenchimento labial, limpeza de pele, acne, peeling e microagulhamento. Atendimento humanizado.">
 
-  <meta name="author" content="Dra. Carolina Hiromi">
-
-  <!-- Open Graph (Instagram / WhatsApp) -->
-  <meta property="og:title" content="Clínica Estética em Jundiapeba | Dra. Carolina Hiromi">
-  <meta property="og:description" content="Tratamentos estéticos personalizados em Jundiapeba – SP. Segurança, ciência e atendimento humanizado.">
-  <meta property="og:type" content="website">
+  <meta name="keywords"
+        content="clínica estética Jundiapeba, estética facial, toxina botulínica Jundiapeba, preenchimento labial, biomédica esteta">
 
   <link rel="stylesheet" href="style.css"/>
 
@@ -32,21 +24,30 @@
 
 <body>
 
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="close" aria-label="Fechar">&times;</button>
+    <h3 id="modal-title"></h3>
+    <p id="modal-text"></p>
+  </div>
+</div>
+
 <!-- HEADER -->
 <header class="top-header">
   <img src="images/logo.svg"
-       alt="Clínica Estética Dra. Carolina Hiromi em Jundiapeba"
+       alt="Clínica Estética Dra. Carolina Hiromi"
        class="logo-svg">
 
-  <div class="header-icons">
-    <a href="https://wa.me/5511974052637" target="_blank" aria-label="WhatsApp Clínica Estética Jundiapeba">
-      <!-- SVG WhatsApp -->
+  <nav class="header-icons">
+    <a href="https://wa.me/5511974052637" target="_blank" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.94 14.5L2 22l5.7-1.5A10 10 0 1012 2z"/></svg>
     </a>
 
-    <a href="https://www.instagram.com/dracarolinahiromi/" target="_blank" aria-label="Instagram Clínica Estética Jundiapeba">
-      <!-- SVG Instagram -->
+    <a href="https://www.instagram.com/dracarolinahiromi/" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10c2.8 0 5 2.2 5 5v10c0 2.8-2.2 5-5 5H7z"/></svg>
     </a>
-  </div>
+  </nav>
 </header>
 
 <!-- APRESENTAÇÃO -->
@@ -66,7 +67,7 @@
     </p>
 
     <a href="https://wa.me/5511974052637" class="btn">
-      Agende sua consulta pelo WhatsApp
+      Agende sua consulta
     </a>
   </div>
 </section>
@@ -75,47 +76,47 @@
 
 <!-- PROCEDIMENTOS -->
 <section class="procedimentos">
-  <h2>Procedimentos Estéticos em Jundiapeba</h2>
+  <h2 class="section-title">Procedimentos Estéticos</h2>
 
   <div class="cards">
 
-    <article class="card">
-      <img src="images/toxina.jpg" alt="Aplicação de toxina botulínica em Jundiapeba">
+    <article class="card" data-procedimento="toxina">
+      <img src="images/toxina.jpg" alt="Toxina botulínica em Jundiapeba">
       <h3>Toxina Botulínica</h3>
     </article>
 
-    <article class="card">
-      <img src="images/labial.png" alt="Preenchimento labial em clínica estética em Jundiapeba">
+    <article class="card" data-procedimento="labial">
+      <img src="images/labial.png" alt="Preenchimento labial em Jundiapeba">
       <h3>Preenchimento Labial</h3>
     </article>
 
-    <article class="card">
-      <img src="images/limpeza.jpg" alt="Limpeza de pele profissional em Jundiapeba">
+    <article class="card" data-procedimento="limpeza">
+      <img src="images/limpeza.jpg" alt="Limpeza de pele profissional">
       <h3>Limpeza de Pele</h3>
     </article>
 
-    <article class="card">
-      <img src="images/acne.jpg" alt="Tratamento para acne em Jundiapeba">
+    <article class="card" data-procedimento="acne">
+      <img src="images/acne.jpg" alt="Tratamento para acne">
       <h3>Tratamento para Acne</h3>
     </article>
 
-    <article class="card">
-      <img src="images/estrias.jpg" alt="Tratamento para estrias em clínica estética">
+    <article class="card" data-procedimento="estrias">
+      <img src="images/estrias.jpg" alt="Tratamento para estrias">
       <h3>Tratamento para Estrias</h3>
     </article>
 
-    <article class="card">
-      <img src="images/peeling.jpg" alt="Peeling químico facial em Jundiapeba">
+    <article class="card" data-procedimento="peeling">
+      <img src="images/peeling.jpg" alt="Peeling químico">
       <h3>Peeling Químico</h3>
     </article>
 
-    <article class="card">
-      <img src="images/microagulhamento.jpg" alt="Microagulhamento facial em Jundiapeba">
+    <article class="card" data-procedimento="microagulhamento">
+      <img src="images/microagulhamento.jpg" alt="Microagulhamento facial">
       <h3>Microagulhamento</h3>
     </article>
 
-    <article class="card">
-      <img src="images/skinbooster.jpg" alt="Skinbooster facial em clínica estética">
+    <article class="card" data-procedimento="skinbooster">
+      <img src="images/skinbooster.jpg" alt="Skinbooster facial">
       <h3>Skinbooster</h3>
     </article>
 
@@ -124,10 +125,20 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
 
+  <div class="icons">
+    <a href="https://wa.me/5511974052637" target="_blank" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.94 14.5L2 22l5.7-1.5A10 10 0 1012 2z"/></svg>
+    </a>
+
+    <a href="https://www.instagram.com/dracarolinahiromi/" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10c2.8 0 5 2.2 5 5v10c0 2.8-2.2 5-5 5H7z"/></svg>
+    </a>
+  </div>
+
   <address>
-    <strong>Clínica Estética em Jundiapeba – SP</strong><br>
     <a href="https://www.google.com/maps/search/?api=1&query=Rua+Manoel+de+Freitas+Garcia+1169+Jundiapeba"
        target="_blank">
       Rua Manoel de Freitas Garcia, nº 1169 – Sala 3<br>
