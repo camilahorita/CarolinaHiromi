@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.4rem 4rem;
+  padding: 2.4rem 3rem;
   background: var(--branco);
 }
 
@@ -228,7 +228,7 @@ body {
 @media (max-width: 768px) {
 
   .top-header {
-    padding: 1.8rem 2rem;
+    padding: 1.8rem 1.5rem;
   }
 
   .logo-svg {
