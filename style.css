@@ -6,7 +6,6 @@
 
 :root {
   font-size: 62.5%;
-
   --rosa-claro: #f6e9ec;
   --rosa-medio: #e8c7cf;
   --rosa-escuro: #c38ea1;
@@ -15,16 +14,16 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--rosa-claro);
+  background: var(--rosa-claro);
   color: var(--texto);
 }
 
 /* HEADER */
 .top-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  align-items: center;
+  padding: 2.5rem 4rem;
   background: #fff;
 }
 
@@ -34,12 +33,12 @@ body {
 
 .header-icons {
   display: flex;
-  gap: 2rem;
+  gap: 2.4rem;
 }
 
 .header-icons svg {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   fill: var(--rosa-escuro);
 }
 
@@ -47,7 +46,7 @@ body {
 .apresentacao {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   padding: 6rem 4rem;
   background: #fff;
   align-items: center;
@@ -59,42 +58,33 @@ body {
   border-radius: 1.6rem;
 }
 
-.apresentacao-texto h2 {
+.apresentacao-texto h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
-  margin-bottom: .5rem;
+  font-size: 3.6rem;
+  margin-bottom: .6rem;
 }
 
-.apresentacao-texto h3 {
-  font-size: 1.6rem;
+.apresentacao-texto h2 {
+  font-size: 1.8rem;
   color: var(--rosa-escuro);
-  font-weight: 500;
-}
-
-.apresentacao-texto h4 {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  color: #888;
+  margin-bottom: 2.4rem;
 }
 
 .apresentacao-texto p {
   font-size: 1.5rem;
-  line-height: 2.4rem;
-  margin-bottom: 3rem;
+  line-height: 2.5rem;
   max-width: 42rem;
+  margin-bottom: 3.2rem;
 }
 
 .btn {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 1.4rem 3.6rem;
   background: var(--rosa-escuro);
   color: #fff;
   text-decoration: none;
   border-radius: 3rem;
   font-size: 1.4rem;
-  font-weight: 500;
 }
 
 /* PROCEDIMENTOS */
@@ -102,23 +92,24 @@ body {
   padding: 6rem 4rem;
 }
 
-.procedimentos h3 {
+.section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 4rem;
 }
 
 .cards {
   display: grid;
-  gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
 }
 
 .card {
   background: #fff;
   border-radius: 1.2rem;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card img {
@@ -127,7 +118,7 @@ body {
   object-fit: cover;
 }
 
-.card h4 {
+.card h3 {
   padding: 1.6rem;
   font-size: 1.6rem;
   text-align: center;
@@ -137,7 +128,7 @@ body {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,.4);
   display: none;
   justify-content: center;
   align-items: center;
@@ -153,17 +144,15 @@ body {
   padding: 3rem;
   border-radius: 1.2rem;
   max-width: 400px;
-  position: relative;
 }
 
 .close {
   position: absolute;
-  top: 1rem;
   right: 1.2rem;
+  top: 1rem;
   background: none;
   border: none;
   font-size: 2.4rem;
-  cursor: pointer;
   color: var(--rosa-escuro);
 }
 
@@ -176,8 +165,8 @@ body {
 
 .icons {
   display: flex;
-  gap: 2rem;
   justify-content: center;
+  gap: 2.4rem;
   margin-bottom: 2rem;
 }
 
@@ -193,15 +182,11 @@ body {
   font-style: normal;
 }
 
-/* 📱 MOBILE */
+/* MOBILE */
 @media (max-width: 768px) {
 
-  .top-header {
-    padding: 2rem;
-  }
-
   .logo-svg {
-    height: 75px;
+    height: 70px;
   }
 
   .apresentacao {
@@ -211,16 +196,20 @@ body {
   }
 
   .apresentacao img {
-    max-width: 280px;
+    max-width: 260px;
     margin: 0 auto 2.5rem;
   }
 
-  .apresentacao-texto h2 {
-    font-size: 2.6rem;
+  .apresentacao-texto h1 {
+    font-size: 2.8rem;
   }
 
-  .apresentacao-texto p {
-    margin: 2rem auto 3rem;
+  .apresentacao-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 2.6rem;
   }
 
   .btn {
@@ -229,3 +218,4 @@ body {
     margin: 0 auto;
   }
 }
+
