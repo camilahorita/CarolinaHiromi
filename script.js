@@ -17,9 +17,16 @@ const procedimentos = {
     title: "Limpeza de Pele",
     text: "Remove impurezas, controla a oleosidade e melhora a textura da pele."
   },
-  acne: {
-    title: "Tratamento para Acne",
-    text: "Protocolos personalizados para controle da acne e prevenção de marcas."
+  tratamentos: {
+    title: "Tratamentos Estéticos",
+    html: `
+      <ul class="modal-list">
+        <li>Tratamento para acne grau 1 e 2</li>
+        <li>Tratamento para estrias</li>
+        <li>Tratamento para queda de cabelo</li>
+        <li>Tratamento para melasma</li>
+      </ul>
+    `
   },
   estrias: {
     title: "Tratamento para Estrias",
