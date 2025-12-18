@@ -41,9 +41,17 @@ const procedimentos = {
     title: "Massagem Modeladora",
     text: "Auxilia na redução de medidas e melhora da circulação."
   },
-  sobrancelha: {
-    title: "Design de Sobrancelhas",
-    text: "Harmonização do olhar respeitando a anatomia facial."
+  microvasos: {
+    title: "PEIM secagem de microvasos",
+    text: "Tratamento para eliminar pequenos vasos sanguíneos."
+  },
+  gorduralocalizada: {
+    title: "Intradermoterapia para gordura localizada",
+    text: "Aplicação de enzimas para reduzir a gordura localizada."
+  },
+  clareamento: {
+    title: "Clareamento de áreas íntimas",
+    text: "Remover excesso de melanina e uniformizar a tonalidade da pele."
   }
 };
 
