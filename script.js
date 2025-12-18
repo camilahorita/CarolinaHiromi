@@ -19,7 +19,7 @@ const procedimentos = {
   },
   tratamentos: {
     title: "Tratamentos Estéticos",
-    html: `
+    text: `
       <ul class="modal-list">
         <li>Tratamento para acne grau 1 e 2</li>
         <li>Tratamento para estrias</li>
