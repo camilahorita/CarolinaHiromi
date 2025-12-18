@@ -28,9 +28,9 @@ const procedimentos = {
       </ul>
     `
   },
-  estrias: {
-    title: "Tratamento para Estrias",
-    text: "Estimula a regeneração da pele e melhora a aparência das estrias."
+  perfiloplastia: {
+    title: "Perfiloplastia",
+    text: "Procedimento para harmonizar o perfil facial através do equilíbrio entre nariz, boca e queixo."
   },
   peeling: {
     title: "Peeling Químico",
