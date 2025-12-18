@@ -49,16 +49,16 @@ const procedimentos = {
     text: "Auxilia na redução de medidas e melhora da circulação."
   },
   microvasos: {
-    title: "PEIM secagem de microvasos",
+    title: "PEIM – Secagem de Microvasos",
     text: "Tratamento para eliminar pequenos vasos sanguíneos."
   },
   gorduralocalizada: {
-    title: "Intradermoterapia para gordura localizada",
-    text: "Aplicação de enzimas para reduzir a gordura localizada."
+    title: "Intradermoterapia para Gordura Localizada",
+    text: "Aplicação de enzimas para auxiliar na redução da gordura localizada."
   },
   clareamento: {
-    title: "Clareamento de áreas íntimas",
-    text: "Remover excesso de melanina e uniformizar a tonalidade da pele."
+    title: "Clareamento de Áreas Íntimas",
+    text: "Tratamento para remover excesso de melanina e uniformizar a tonalidade da pele."
   }
 };
 
@@ -69,7 +69,9 @@ cards.forEach(card => {
     if (!procedimentos[tipo]) return;
 
     title.textContent = procedimentos[tipo].title;
-    text.textContent = procedimentos[tipo].text;
+
+    text.innerHTML = procedimentos[tipo].text;
+
     modal.classList.add('active');
   });
 });
